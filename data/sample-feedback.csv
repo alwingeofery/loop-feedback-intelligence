@@ -1,0 +1,5 @@
+title,content,source,customerName,customerEmail,sentiment
+Login friction,"I had to reset my password twice before I could sign in.",CSV,Ava Stone,ava@example.com,-0.4
+Great support,"Your support team solved my billing issue really quickly.",CSV,Leo Reed,leo@example.com,0.9
+Feature request,"Please add weekly trend reports for theme changes.",CSV,Mia Patel,mia@example.com,0.3
+

@@ -1,0 +1,49 @@
+import type { ReactNode } from "react";
+import { Card, CardContent } from "@/components/ui";
+
+interface TableColumn {
+  key: string;
+  label: string;
+}
+
+interface DataTableProps {
+  columns: TableColumn[];
+  rows: ReactNode[][];
+}
+
+export function DataTable({ columns, rows }: DataTableProps) {
+  return (
+    <Card>
+      <CardContent className="overflow-hidden p-0">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-slate-200">
+            <thead className="bg-slate-50">
+              <tr>
+                {columns.map((column) => (
+                  <th
+                    key={column.key}
+                    className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.22em] text-slate-500"
+                  >
+                    {column.label}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 bg-white">
+              {rows.map((row, index) => (
+                <tr key={index} className="align-top">
+                  {row.map((cell, cellIndex) => (
+                    <td key={cellIndex} className="px-4 py-4 text-sm text-slate-700">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+

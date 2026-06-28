@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Support Responsiveness",
+    "description": "Customer sentiment about support speed and helpfulness."
+  },
+  {
+    "name": "Authentication Friction",
+    "description": "Issues related to signup, login, and account access."
+  }
+]
+
